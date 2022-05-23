@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="Root"
+    x:Class="CustomComponentBindingTest.Views.ItemViewComponentVM">
+    <ContentView.Content>
+        <StackLayout Padding="10">
+            <Label Text="{Binding Test, Source={x:Reference Root}}" 
+                            LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" />
+            <Label Text="VM Component" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="13" />
+            <Label Text="{Binding TestNumber}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="13" />
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
